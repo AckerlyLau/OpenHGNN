@@ -82,8 +82,8 @@ SUPPORTED_FLOWS = {
     'DSSL_trainer': 'openhgnn.trainerflow.DSSL_trainer',
     'hgcltrainer': 'openhgnn.trainerflow.hgcl_trainer',
     'lightGCN_trainer': 'openhgnn.trainerflow.lightGCN_trainer',
-    'KTN_trainer':'openhgnn.trainerflow.KTN_trainer'
-    'SeHGNN_trainer': 'openhgnn.trainerflow.SeHGNN_trainer'
+    'KTN_trainer':'openhgnn.trainerflow.KTN_trainer',
+    'SeHGNN_trainer': 'openhgnn.trainerflow.SeHGNN_trainer',
     'Grail_trainer': 'openhgnn.trainerflow.Grail_trainer',
     'ComPILE_trainer': 'openhgnn.trainerflow.ComPILE_trainer',
     'AdapropT_trainer': 'openhgnn.trainerflow.AdapropT_trainer',
@@ -179,8 +179,8 @@ __all__ = [
     'DSSL_trainer',
     'HGCLtrainer',
     'lightGCNTrainer',
-    'KTN_NodeClassification'
-    'SeHGNNtrainer'
+    'KTN_NodeClassification',
+    'SeHGNNtrainer',
     'GrailTrainer',
     'ComPILETrainer',
     'AdapropTTrainer',

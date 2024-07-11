@@ -1490,7 +1490,22 @@ class Config(object):
             self.hid_dim = conf.getint("HMPNN", "hid_dim")
             self.max_epoch = conf.getint("HMPNN", "max_epoch")
             self.batch_size= conf.getint("HMPNN", "batch_size")
+        elif self.model_name == 'MHGCN':
+            self.lr = conf.getfloat("MHGCN", "learning_rate")
+            self.dropout = conf.getfloat("MHGCN", "dropout")
 
+            self.in_dim = conf.getint("MHGCN", "in_dim")
+            self.hidden_dim = conf.getint("MHGCN", "hidden_dim")
+            self.out_dim = conf.getint("MHGCN","out_dim")
+            self.num_layers = conf.getint("MHGCN", "num_layers")
+            self.max_epoch = conf.getint("MHGCN", "max_epoch")
+            self.weight_decay = conf.getfloat("MHGCN", "weight_decay")
+            # self.fanout = conf.getint("MHGCN", "fanout")
+            self.patience = conf.getint("MHGCN", "patience")
+            self.batch_size = conf.getint("MHGCN", "batch_size")
+            self.validation = conf.getboolean("MHGCN", "validation")
+            self.mini_batch_flag = conf.getboolean("MHGCN", "mini_batch_flag")
+            self.use_self_loop = conf.getboolean("MHGCN", "use_self_loop")
         if hasattr(self, "device"):
             self.device = th.device(self.device)
         elif gpu == -1:

@@ -132,6 +132,8 @@ SUPPORTED_MODELS = {
     'Ingram': 'openhgnn.models.Ingram',
     'RedGNN': 'openhgnn.models.RedGNN',
     'RedGNNT': 'openhgnn.models.RedGNNT',
+    'MHGCN':'openhgnn.models.MHGCN',
+
 }
 
 from .SIAN import SIAN
