@@ -197,12 +197,12 @@ class Experiment(object):
             for func in self.config.line_profiler_func:
                 prof = prof(func)
             prof.enable_by_count()
-
         self.config.logger = Logger(self.config)
         set_random_seed(self.config.seed)
         trainerflow = self.specific_trainerflow.get(self.config.model, self.config.task)
         if type(trainerflow) is not str:
             trainerflow = trainerflow.get(self.config.task)
+            print("trainerflow",trainerflow)
         if self.config.hpo_search_space is not None:
             # hyper-parameter search
             hpo_experiment(self.config, trainerflow)

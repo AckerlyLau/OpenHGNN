@@ -25,5 +25,5 @@ if __name__ == '__main__':
                             use_best_config=args.use_best_config, load_from_pretrained=args.load_from_pretrained,
                             mini_batch_flag=args.mini_batch_flag, use_distributed = args.use_distributed,
                             graphbolt = args.graphbolt)
-
+    print("experiment")
     experiment.run()

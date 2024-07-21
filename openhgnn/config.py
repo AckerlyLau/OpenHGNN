@@ -1493,8 +1493,7 @@ class Config(object):
         elif self.model_name == 'MHGCN':
             self.lr = conf.getfloat("MHGCN", "learning_rate")
             self.dropout = conf.getfloat("MHGCN", "dropout")
-
-            self.in_dim = conf.getint("MHGCN", "in_dim")
+            self.use_hgcn = conf.getboolean("MHGCN","use_hgcn")
             self.hidden_dim = conf.getint("MHGCN", "hidden_dim")
             self.out_dim = conf.getint("MHGCN","out_dim")
             self.num_layers = conf.getint("MHGCN", "num_layers")
